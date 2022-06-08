@@ -54,6 +54,8 @@ h4 {
     color: #999999;
 }
 
+
+
 .loading {
     margin: 35px auto;
     text-align: center;
@@ -61,6 +63,9 @@ h4 {
     /* display: none; */
 }
 
+.loading-visible {
+    visibility: visible;
+}
 
 .footer {
     position: relative;
