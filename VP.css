@@ -39,6 +39,7 @@ body {
 
 .btn:hover{
     background-color: rgb(19, 17, 17);
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.24);
 }
 
 .btn__creat {
@@ -54,13 +55,59 @@ h4 {
     color: #999999;
 }
 
-
+.container-for-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: inherit;
+}
 
 .loading {
-    margin: 35px auto;
-    text-align: center;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, transparent, transparent 10%, #e5f403);
+    animation: animate 2s linear infinite;
     visibility: hidden;
-    /* display: none; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@keyframes animate {
+    0% {
+    transform: rotate(0deg);
+    filter: hue-rotate(0deg);
+    }
+    100% {
+    transform: rotate(360deg);
+    filter: hue-rotate(360deg);
+    }
+}
+
+.loading:before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    /* background: rgb(19, 17, 17); */
+    border-radius: 50%;
+    z-index: 999;
+}
+.loading:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
+    border-radius: 50%;
+    z-index: 999;
+    z-index: 1;
+    filter: blur(20px);
 }
 
 .loading-visible {
@@ -72,7 +119,6 @@ h4 {
     text-align: center;
     border: none;
     margin: auto;
-    margin-top: 40px;
     padding: 20px;
     height: 80px;
 }
