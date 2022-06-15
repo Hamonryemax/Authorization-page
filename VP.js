@@ -38,7 +38,3 @@ function showLoading() {
 function getRandom(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
-
-function con() {
-    console.log('Выведись вовремя, пж');
-}
