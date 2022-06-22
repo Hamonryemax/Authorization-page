@@ -26,7 +26,17 @@ body {
     font-family: inherit;
 }
 
+
+.container-for-buttons {
+    margin-right: 135px;
+}
+
 .btn {
+    user-select: none;
+    text-align: center;
+    margin-top: 0px;
+    height: 60px;
+    width: 130px;
     background-color: #333;
     padding: 20px 40px;
     color: white;
@@ -34,13 +44,45 @@ body {
     border: none;
     font-family: inherit;
     cursor: pointer;
-    margin-bottom: 35px
+    position: relative;
 }
 
 .btn:hover{
-    background-color: rgb(19, 17, 17);
+    opacity: 0.95;
     box-shadow: 0 3px 6px 0 rgba(0,0,0,0.24);
 }
+
+
+.error {
+    background-color: rgb(250, 45, 45);
+    position: absolute;
+    display: none;
+    cursor: default;
+}
+
+.show-error {
+    display: inline;
+}
+
+.success {
+    background-color: rgb(77, 214, 77);
+    position: absolute;
+    display: none;
+    cursor: default;
+}
+
+.show-success {
+    display: inline;
+}
+
+.button {
+    position: absolute; 
+}
+
+.button-none {
+    display: none;
+}
+
 
 .btn__creat {
     font-size: 20 px;
@@ -51,11 +93,13 @@ body {
     cursor: pointer;
 }
 
+
 h4 {
     color: #999999;
 }
 
 .container-for-loading {
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,7 +136,6 @@ h4 {
     left: 6px;
     right: 6px;
     bottom: 6px;
-    /* background: rgb(19, 17, 17); */
     border-radius: 50%;
     z-index: 999;
 }
@@ -111,6 +154,7 @@ h4 {
 }
 
 .loading-visible {
+    transition: width 0.3s;
     visibility: visible;
 }
 

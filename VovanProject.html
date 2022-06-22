@@ -14,21 +14,27 @@
         <h1>Login</h1>
         <input id="login" class="form-group" type="text" placeholder="Login">
         <input id="pass" class="form-group" type="password" placeholder="Password">
-        <button id="button" class="btn">Send</button>
+        <div class="container-for-buttons">
+            <button id="error" class="btn error">Error</button>
+            <button id="success" class="btn success">Success</button>
+            <button id="button" class="btn button">Send</button>
+        </div>
         <div class="container-for-loading">
             <div class="loading">
+                <!-- <div class="container-for-success">
+                </div> -->
             </div>
         </div>
-    </div>
-    <div class="footer">
-        <div class="registration">
-            <h4>
-                Don't have an account?
-            </h4>
-            <input class="btn__creat" type="submit" value="Sign up now">
+        <div class="footer">
+            <div class="registration">
+                <h4>
+                    Don't have an account?
+                </h4>
+                <input class="btn__creat" type="submit" value="Sign up now">
+            </div>
         </div>
-    </div>
-    <script src="VP.js"></script>
+
+        <script src="VP.js"></script>
 </body>
 
 </html>
