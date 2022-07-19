@@ -7,10 +7,12 @@ function showLoadingAndAuthorization() {
     if (login === '' || pass === '') {
         return;
     }
+    inputDisabled();
     const loading = document.querySelector('.loading');
     const remove = function () {
         loading.classList.remove('loading-visible');
         authorization();
+        inputNonDisabled();
     };
     loading.classList.add('loading-visible');
     setTimeout(remove, getRandom(1000, 3000));
@@ -53,4 +55,14 @@ function getVerification(login, pass) {
 
 function getRandom(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function inputDisabled() {
+    document.getElementById('login').setAttribute('disabled', 'disabled');
+    document.getElementById('pass').setAttribute('disabled', 'disabled');
+}
+
+function inputNonDisabled() {
+    document.getElementById('login').removeAttribute('disabled');
+    document.getElementById('pass').removeAttribute('disabled');
 }
